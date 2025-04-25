@@ -9,7 +9,7 @@ export const fetchSuggestion = createAsyncThunk('suggestion/fetchSuggestion', as
 const initialState = {
   suggestion: '',
   loading: false,
-  error: true,
+  error: false,
 };
 
 const options = {
