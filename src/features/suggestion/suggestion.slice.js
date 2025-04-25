@@ -2,8 +2,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchSuggestion = createAsyncThunk('suggestion/fetchSuggestion', async (arg, thunkAPI) => {
   const response = await fetch('http://localhost:3004/api/suggestion');
-  const { data } = await response.json();
-  return data;
+  //const { data } = await response.json();
+  //return data;
+  return await response.json();
 })
 
 const initialState = {
